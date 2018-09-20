@@ -131,7 +131,7 @@ sudo apt-get install npm
 sudo apt-get install nodejs-legacy
 ```
 
-### Building (gulp)
+### Building (gulp version 3)
 
 ```bash
 npm run-script build
