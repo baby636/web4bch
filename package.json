@@ -1,7 +1,7 @@
 {
   "name": "web4bch",
   "namespace": "bitcoincash",
-  "version": "0.0.1",
+  "version": "0.20.7",
   "description": "Bitcoin Cash JavaScript API, middleware to talk to a bitcoin cash node over RPC",
   "main": "./index.js",
   "directories": {
@@ -59,9 +59,9 @@
   "author": "",
   "authors": [
     {
-      "name": "",
-      "email": "@.com",
-      "url": "https://"
+      "name": "SpendBCH",
+      "email": "spendbch@spendbch.io",
+      "url": "https://spendbch.io"
     },
     {
       "name": "Gabriel Cardona",

@@ -19,8 +19,8 @@ var replace = require('gulp-replace');
 
 var DEST = path.join(__dirname, 'dist/');
 var src = 'index';
-var dst = 'web3';
-var lightDst = 'web3-light';
+var dst = 'web4bch';
+var lightDst = 'web4bch-light';
 
 var browserifyOptions = {
     debug: true,
@@ -60,7 +60,7 @@ gulp.task('clean', ['lint'], function(cb) {
 
 gulp.task('light', ['clean'], function () {
     return browserify(browserifyOptions)
-        .require('./' + src + '.js', {expose: 'web3'})
+        .require('./' + src + '.js', {expose: 'web4bch'})
         .ignore('bignumber.js')
         .require('./lib/utils/browser-bn.js', {expose: 'bignumber.js'}) // fake bignumber.js
         .add('./' + src + '.js')
@@ -75,7 +75,7 @@ gulp.task('light', ['clean'], function () {
 
 gulp.task('standalone', ['clean'], function () {
     return browserify(browserifyOptions)
-        .require('./' + src + '.js', {expose: 'web3'})
+        .require('./' + src + '.js', {expose: 'web4bch'})
         .require('bignumber.js') // expose it to dapp users
         .add('./' + src + '.js')
         .ignore('crypto')
