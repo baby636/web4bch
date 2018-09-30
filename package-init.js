@@ -3,14 +3,14 @@
 
 // Browser environment
 if(typeof window !== 'undefined') {
-    Web3 = (typeof window.Web3 !== 'undefined') ? window.Web3 : require('web3');
+    Web4Bch = (typeof window.Web4Bch !== 'undefined') ? window.Web4Bch : require('web4bch');
     BigNumber = (typeof window.BigNumber !== 'undefined') ? window.BigNumber : require('bignumber.js');
 }
 
 
 // Node environment
 if(typeof global !== 'undefined') {
-    Web3 = (typeof global.Web3 !== 'undefined') ? global.Web3 : require('web3');
+    Web4Bch = (typeof global.Web4Bch !== 'undefined') ? global.Web4Bch : require('web4bch');
     BigNumber = (typeof global.BigNumber !== 'undefined') ? global.BigNumber : require('bignumber.js');
 }
 
