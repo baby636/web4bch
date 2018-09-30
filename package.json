@@ -1,7 +1,7 @@
 {
   "name": "web4bch",
   "namespace": "bitcoincash",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bitcoin Cash JavaScript API, middleware to talk to a bitcoin cash node over RPC",
   "main": "./index.js",
   "directories": {
