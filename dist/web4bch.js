@@ -1733,13 +1733,13 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 /**
  * Utils
- * 
+ *
  * @module utils
  */
 
 /**
  * Utility functions
- * 
+ *
  * @class [utils] config
  * @constructor
  */
@@ -1785,7 +1785,8 @@ module.exports = {
     ETH_BIGNUMBER_ROUNDING_MODE: { ROUNDING_MODE: BigNumber.ROUND_DOWN },
     ETH_POLLING_TIMEOUT: 1000/2,
     defaultBlock: 'latest',
-    defaultAccount: undefined
+    defaultAccount: undefined,
+    defaultSlpAccount: undefined
 };
 
 
@@ -5176,6 +5177,11 @@ function Bch(web3) {
         method.setRequestManager(self._requestManager);
     });
 
+    properties().forEach(function(p) {
+        p.attachToObject(self);
+        p.setRequestManager(self._requestManager);
+    });
+
     this.iban = Iban;
     this.sendIBANTransaction = transfer.bind(null, this);
 }
@@ -5231,6 +5237,16 @@ var methods = function () {
         sign
     ];
 };
+
+var properties = function () {
+    return [
+        new Property({
+            name: 'defaultSlpAccount',
+            getter: 'slp_coinbase'
+        })
+    ];
+};
+
 
 module.exports = Bch;
 
@@ -6732,6 +6748,7 @@ module.exports = RequestManager;
 var Settings = function () {
     this.defaultBlock = 'latest';
     this.defaultAccount = undefined;
+    this.defaultSlpAccount = undefined;
 };
 
 module.exports = Settings;
